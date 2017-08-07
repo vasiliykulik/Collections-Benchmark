@@ -8,13 +8,10 @@ public class AverageAllMeasurement{
   private String operation;
   private long averageTimeOfExecution;
 
-  @Override
-  public String toString() {
-    return "AverageAllMeasurement{" +
-            "testedStructure='" + testedStructure + '\'' +
-            ", operation='" + operation + '\'' +
-            ", averageTimeOfExecution=" + averageTimeOfExecution +
-            '}';
+  public AverageAllMeasurement(String testedStructure, String operation, long averageTimeOfExecution) {
+    this.testedStructure = testedStructure;
+    this.operation = operation;
+    this.averageTimeOfExecution = averageTimeOfExecution;
   }
 
   public String getTestedStructure() {
@@ -41,9 +38,12 @@ public class AverageAllMeasurement{
     this.averageTimeOfExecution = averageTimeOfExecution;
   }
 
-  public AverageAllMeasurement(String testedStructure, String operation, long averageTimeOfExecution) {
-    this.testedStructure = testedStructure;
-    this.operation = operation;
-    this.averageTimeOfExecution = averageTimeOfExecution;
+  @Override
+  public String toString() {
+    return "AverageAllMeasurement{" +
+            "testedStructure='" + testedStructure + '\'' +
+            ", operation='" + operation + '\'' +
+            ", averageTimeOfExecution=" + averageTimeOfExecution +
+            '}';
   }
 }

@@ -279,7 +279,7 @@ public class Randomizer {
   }
 
   public static void main(String[] args) {
-    for (j = 10000; j <= 100000; j *= 10) {
+    for (j = 10000; j <= 1000000; j *= 10) {
       test(j, quantityOfMeasurements);
     }
     AverageResult average = new AverageResult();

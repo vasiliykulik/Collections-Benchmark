@@ -12,15 +12,12 @@ public class Measurement {
   private long timeOfExecution;
 
 
-  @Override
-  public String toString() {
-    return "Measurement{" +
-            "testedStructure='" + testedStructure + '\'' +
-            ", operation='" + operation + '\'' +
-            ", quantityOfElements=" + quantityOfElements +
-            ", quantityOfMeasurements=" + quantityOfMeasurements +
-            ", timeOfExecution=" + timeOfExecution +
-            '}';
+  public Measurement(String testedStructure, String operation, int quantityOfElements, int quantityOfMeasurements, long timeOfExecution) {
+    this.testedStructure = testedStructure;
+    this.operation = operation;
+    this.quantityOfElements = quantityOfElements;
+    this.quantityOfMeasurements = quantityOfMeasurements;
+    this.timeOfExecution = timeOfExecution;
   }
 
   public String getTestedStructure() {
@@ -63,13 +60,14 @@ public class Measurement {
     this.timeOfExecution = timeOfExecution;
   }
 
-
-
-  public Measurement(String testedStructure, String operation, int quantityOfElements, int quantityOfMeasurements, long timeOfExecution) {
-    this.testedStructure = testedStructure;
-    this.operation = operation;
-    this.quantityOfElements = quantityOfElements;
-    this.quantityOfMeasurements = quantityOfMeasurements;
-    this.timeOfExecution = timeOfExecution;
+  @Override
+  public String toString() {
+    return "Measurement{" +
+            "testedStructure='" + testedStructure + '\'' +
+            ", operation='" + operation + '\'' +
+            ", quantityOfElements=" + quantityOfElements +
+            ", quantityOfMeasurements=" + quantityOfMeasurements +
+            ", timeOfExecution=" + timeOfExecution +
+            '}';
   }
 }
