@@ -21,7 +21,7 @@ import java.util.*;
 public class Randomizer {
 
   public static int j;
-  public static int quantityOfMeasurements = 100;
+  public static int quantityOfMeasurements = 1;
   public static List<Measurement> testResults = new ArrayList<>();
   public static List<AverageMeasurement> avgTestResults = new ArrayList<>();
   public static List<AverageAllMeasurement> avgAll = new ArrayList<>();
@@ -279,7 +279,7 @@ public class Randomizer {
   }
 
   public static void main(String[] args) {
-    for (j = 10000; j <= 1000000; j *= 10) {
+    for (j = 100; j <= 1000; j *= 10) {
       test(j, quantityOfMeasurements);
     }
     AverageResult average = new AverageResult();
@@ -406,15 +406,15 @@ public class Randomizer {
 
     String[][] data = {
             {"ArrayList", String.valueOf(aLA), String.valueOf(aLS), String.valueOf(aLG),
-                    String.valueOf(aLC), String.valueOf(aLR), null, String.valueOf(aLIA), String.valueOf(aLIR)},
+                    String.valueOf(aLC), String.valueOf(aLR), "0", String.valueOf(aLIA), String.valueOf(aLIR)},
             {"LinkedList", String.valueOf(lLa), String.valueOf(lLS), String.valueOf(lLG),
-                    String.valueOf(lLC), String.valueOf(lLR), null, String.valueOf(lLIA), String.valueOf(lLIR)},
-            {"HashSet", String.valueOf(hSA), null, null, String.valueOf(hSC), String.valueOf(hSR),
-                    null, null, null},
-            {"TreeSet", String.valueOf(tSA), null, null, String.valueOf(tSC), String.valueOf(tSR),
-                    null, null, null},
-            {"ArrayDeque", String.valueOf(aDA), null, null, String.valueOf(aDC), String.valueOf(aDR),
-                    null, null, null}
+                    String.valueOf(lLC), String.valueOf(lLR), "0", String.valueOf(lLIA), String.valueOf(lLIR)},
+            {"HashSet", String.valueOf(hSA), "0", "0", String.valueOf(hSC), String.valueOf(hSR),
+                    "0", "0", "0"},
+            {"TreeSet", String.valueOf(tSA), "0", "0", String.valueOf(tSC), String.valueOf(tSR),
+                    "0", "0", "0"},
+            {"ArrayDeque", String.valueOf(aDA), "0", "0", String.valueOf(aDC), String.valueOf(aDR),
+                    "0", "0", "0"}
     };
     String[] headers = {"Collection",
             "add",
